@@ -34,6 +34,10 @@ let persons = [
   },
 ];
 
+app.get('/', (request, response) => {
+  response.send('<h1>Hello World!</h1>')
+})
+
 app.get("/info/", (req, res) => {
   const now = res.send(`<p>Phonebook has info for ${persons.length} people</p>
               <p>${new Date().toString()}</p>`);
